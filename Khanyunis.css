@@ -1,49 +1,145 @@
-.content-center{
-    text-align:center;
-    background-color: rgb(218, 233, 212);
-    max-width: 100%;
-    padding: 1rem;
-    margin: 0%;
-    }
-   
-.background-color {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.hero-section {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: -100px auto 0;
+    padding: 2rem;
+    position: relative;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.profile-images {
+    margin-bottom: 2rem;
+}
+
+.child-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.profile-info {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.personal-details ul {
+    list-style: none;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
-    padding: 20px;
-    max-width: 100%;
-   }
-.content-center h3{
-    color: olive;
-    line-height: 1.6;
-    text-align: center;
-   }
-   .content-center h2{
-    color:#4a6741;
+    gap: 2rem;
+}
+
+.personal-details li {
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.personal-details span {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-right: 0.5rem;
+}
+
+.info-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
     margin-bottom: 1.5rem;
-    text-align: center;
-    
-   }
-   .image-container{
-    width: 100px;
-    margin-left: 20px;
-    height: auto;
-   }
-   .image-container img{
-    width: 100%;
-    height: auto;
-   }
-   .content-container li {
-    margin-left: 80px;
-    text-align: center;
-   }
-   .content-container ul{
-    margin-right: 100;
-    list-style: upper-roman;
-    color: rgb(97, 7, 7);
-   }
-   .content-center h4{
-    color:#4a6741;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    
-   }
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.mental-health {
+    background-color: #fff3f3;
+    border-left: 4px solid #e74c3c;
+}
+
+.current-status {
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 1rem;
+        margin-top: -50px;
+    }
+
+    .personal-details ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .child-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
